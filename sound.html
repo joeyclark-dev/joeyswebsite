@@ -1,0 +1,42 @@
+<script>
+
+function play(sound) {
+  var audio = new Audio(sound);
+  audio.play();
+}
+
+
+
+
+function loadPage() {
+  play('./like.mp3');
+}
+
+  
+var resp = audio.play();
+
+if (resp!== undefined) {
+    resp.then(_ => {
+        // autoplay starts!
+    }).catch(error => {
+       //show error
+    });
+}
+
+
+
+</script>
+
+<figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio
+        controls
+        src="./like.Mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+<body onclick="loadPage()">
+  
+</body>
